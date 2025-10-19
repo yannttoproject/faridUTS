@@ -1,0 +1,364 @@
+/* 🌐 GAYA UMUM */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f9f9f9 0%, #eef3ff 100%);
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* 🔹 HEADER */
+header {
+    background: linear-gradient(90deg, #004aad, #0077ff);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #ffb703;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffb703;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* 🏙️ HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0, 40, 90, 0.7), rgba(0, 40, 90, 0.7)),
+                url('https://picsum.photos/1600/700?blur=3') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 140px 20px;
+    box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+    font-size: 46px;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.btn {
+    background: linear-gradient(90deg, #ffb703, #ffd166);
+    color: #333;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 183, 3, 0.4);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ffd166, #ffb703);
+    transform: translateY(-4px);
+}
+
+/* 🏠 LISTING PROPERTI */
+.listing {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+}
+
+.listing h2 {
+    font-size: 32px;
+    color: #004aad;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+}
+
+.listing h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffb703;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.property-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.property-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f3f6ff 100%);
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.property-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid #004aad;
+}
+
+.property-card h3 {
+    margin: 18px 0 8px;
+    color: #004aad;
+    font-size: 22px;
+}
+
+.property-card p {
+    margin: 0 15px 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+.btn-detail {
+    display: inline-block;
+    margin: 12px 0 20px;
+    background: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background: #0077ff;
+    transform: translateY(-3px);
+}
+
+/* ⚙️ FOOTER */
+footer {
+    background: linear-gradient(90deg, #004aad, #0077ff);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 15px;
+    margin-top: 80px;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 RESPONSIF */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .property-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-card {
+        width: 90%;
+    }
+}
+/* 🏢 Tentang Kami */
+.about {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about h2 {
+    color: #004aad;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* 📞 Kontak */
+.contact {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #004aad;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #004aad;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 74, 173, 0.2);
+}
+/* 🏡 Halaman Detail Properti */
+.property-detail {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 30px;
+}
+
+.detail-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.detail-info {
+    flex: 1;
+}
+
+.detail-info h2 {
+    color: #004aad;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.price {
+    color: #ffb703;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.specs {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.specs li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-container img {
+        max-width: 100%;
+    }
+}
